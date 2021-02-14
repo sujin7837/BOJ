@@ -6,9 +6,25 @@
 //
 
 #include <iostream>
+#include <algorithm>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(void) {
+    int n;
+    int k[200000]={0,};
+    int max=0;
+    
+    cin>>n;
+    
+    for(int i=0;i<n;i++) {
+        cin>>k[i];
+    }
+    sort(k, k+n);
+    for(int i=0;i<n;i++) {
+        if(k[i]*(n-i)>max) max=k[i]*(n-i);
+    }
+
+    cout<<max<<endl;
+    
     return 0;
 }
