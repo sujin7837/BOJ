@@ -14,12 +14,12 @@ int arr[110][110]={0,};
 bool visit[110]={0,};
 
 
-void dfs(int x) {
+void bfs(int x) {
     visit[x]=true;
     num++;
     
     for(int i=1;i<=n;i++) {
-        if(!visit[i]&&arr[x][i]) dfs(i);
+        if(!visit[i]&&arr[x][i]) bfs(i);
     }
 }
 
@@ -34,7 +34,7 @@ int main(void) {
         arr[first][second]=1;
         arr[second][first]=1;
     }
-    dfs(1);
+    bfs(1);
     
     cout<<num-1<<endl;
     
