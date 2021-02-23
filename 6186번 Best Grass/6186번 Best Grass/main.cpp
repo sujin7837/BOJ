@@ -14,14 +14,14 @@ bool visit[150][150];
 int dx[4]={-1, 1, 0, 0};
 int dy[4]={0, 0, -1, 1};
 
-void dfs(int x, int y) {
+void bfs(int x, int y) {
     visit[x][y]=true;
     for(int i=0;i<4;i++) {
         int nx=x+dx[i];
         int ny=y+dy[i];
         
         if(nx<0||nx>=r||ny<0||ny>=c) continue;
-        if(!visit[nx][ny]&&a[nx][ny]=='#') dfs(nx, ny);
+        if(!visit[nx][ny]&&a[nx][ny]=='#') bfs(nx, ny);
     }
     
  }
@@ -40,7 +40,7 @@ int main(void) {
     for(int i=0;i<r;i++) {
         for(int j=0;j<c;j++) {
             if(!visit[i][j]&&a[i][j]=='#') {
-                dfs(i, j);
+                bfs(i, j);
                 num++;
             }
         }
