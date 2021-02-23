@@ -16,7 +16,7 @@ int dy[4]={0, 0, -1, 1};
 char arr[510][510];
 bool visit[510][510]={false, };
 
-int dfs(int x, int y) {
+int bfs(int x, int y) {
     visit[x][y]=true;
     
     for(int i=0;i<4;i++) {
@@ -41,7 +41,7 @@ int main(void) {
     for(int i=0;i<r;i++) {
         for(int j=0;j<c;j++) {
             if(arr[i][j]=='S') {
-                dfs(i, j);
+                bfs(i, j);
                 if(result==0) continue;
             }
             if(arr[i][j]=='.') arr[i][j]='D';
