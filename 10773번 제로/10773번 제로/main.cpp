@@ -6,9 +6,26 @@
 //
 
 #include <iostream>
+#include <stack>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    int k,n;
+    int sum=0;
+    stack<int> s;
+    
+    cin>>k;
+    for(int i=0;i<k;i++) {
+        cin>>n;
+        if(n!=0) s.push(n);
+        else s.pop();
+    }
+    
+    while(!s.empty()) {
+        sum+=s.top();
+        s.pop();
+    }
+    cout<<sum<<endl;
+    
     return 0;
 }
