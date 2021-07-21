@@ -33,7 +33,7 @@ int main() {
             } else if(s=="remove"){
                 checkNum[num]=false;
             } else if(s=="check") {
-                checkNum[num]==true ? cout<<1<<endl : cout<<0<<endl;
+                checkNum[num]==true ? puts("1"):puts("0");
             } else if(s=="toggle") {
                 checkNum[num]==true ? checkNum[num]=false : checkNum[num]=true;
             }
