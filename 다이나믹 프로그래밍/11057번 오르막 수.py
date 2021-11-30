@@ -6,8 +6,6 @@ for i in range(1, 11):
 
 for i in range(2, n+1):
     for j in range(1, 11):
-
         dp[i][j] = sum(dp[i-1][1:j+1])
-        print(dp[i][j], j)
 
 print(sum(dp[n]) % 10007)
