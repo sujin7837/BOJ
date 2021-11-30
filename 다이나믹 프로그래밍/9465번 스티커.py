@@ -13,4 +13,3 @@ for test in range(t):
         dp[1][i] = max(dp[1][i-1], dp[0][i-1] + li2[i])
 
     print(max(dp[0][n-1], dp[1][n-1]))
-    
