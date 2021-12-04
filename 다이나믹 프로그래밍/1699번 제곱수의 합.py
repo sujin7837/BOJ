@@ -1,12 +1,9 @@
 n = int(input())
-num = int(n ** (1/2))
-cnt = 0
+dp = [i for i in range(n+1)]
 
-while n > 0 and num > 0:
-    if n >= (num ** 2):
-        n -= (num ** 2)
-        cnt += 1
-    else:
-        num -= 1
+for i in range(4, n+1):
+    for j in range(1, int(i**(1/2))+1):
+        if dp[i] > dp[i-j**2] + 1:
+            dp[i] = dp[i-j**2] + 1
 
-print(cnt)
+print(dp[n])
