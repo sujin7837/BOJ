@@ -1,7 +1,7 @@
 import sys
 
 n = int(sys.stdin.readline())
-li = [0] * (n+1)
+li = [0] * 10001
 
 for i in range(n):
     num = int(sys.stdin.readline())
