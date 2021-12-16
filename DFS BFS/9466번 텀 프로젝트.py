@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10**6)
+
 def dfs(x):
     global result
     visit[x] = True
