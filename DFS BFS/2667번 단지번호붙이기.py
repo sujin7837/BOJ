@@ -38,5 +38,6 @@ print(result)
 if len(result_cnt) == 0:
     print(0)
 else:
+    result_cnt.sort()
     for x in result_cnt:
         print(x)
