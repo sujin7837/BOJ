@@ -19,6 +19,7 @@ n = int(input())
 graph = [[] for _ in range(n)]
 visit = [[False] * (n+1) for _ in range(n+1)]
 result = 0
+result_cnt = []
 
 for i in range(n):
     s = input()
@@ -27,11 +28,15 @@ for i in range(n):
 
 for i in range(n):
     for j in range(n):
-        if graph[i][j] == '1':
+        if graph[i][j] == '1' and (not visit[i][j]):
             cnt = []
             result += 1
             dfs(i, j)
-            print(len(cnt))
+            result_cnt.append(len(cnt))
 
 print(result)
-print()
+if len(result_cnt) == 0:
+    print(0)
+else:
+    for x in result_cnt:
+        print(x)
