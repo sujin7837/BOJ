@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10 ** 6)
+
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
@@ -15,11 +18,13 @@ def dfs(x, y):
 
 while True:
     w, h = map(int, input().split())
+    print(w, h)
     if w == 0 and h == 0:
+        print('haha')
         break
     else:
         li = [[] for _ in range(h)]
-        visit = [[False] * (w * h)]
+        visit = [[False] * (w * h) for _ in range(w * h) ] 
         cnt = 0
 
         for i in range(h):
