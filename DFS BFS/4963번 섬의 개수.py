@@ -26,6 +26,7 @@ while True:
 
         for i in range(h):
             li[i] = list(map(int, input().split()))
+
         for i in range(h):
             for j in range(w):
                 if not visit[i][j] and li[i][j] == 1:
