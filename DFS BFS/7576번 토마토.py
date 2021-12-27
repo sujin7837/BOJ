@@ -30,6 +30,7 @@ for i in range(n):
             queue.append([i, j])
 
 bfs()
+
 for i in li:
     for j in i:
         if j == 0:
