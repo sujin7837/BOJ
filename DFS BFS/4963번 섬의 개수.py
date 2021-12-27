@@ -7,7 +7,7 @@ dy = [-1, 0, 1, -1, 0, 1, -1, 1]
 def dfs(x, y):
     visit[x][y] = True
 
-    for i in range(7):
+    for i in range(8):
         nx = x + dx[i]
         ny = y + dy[i]
 
@@ -15,15 +15,13 @@ def dfs(x, y):
             if not visit[nx][ny] and li[nx][ny] == 1:
                 dfs(nx, ny)
 
-
-
 while True:
     w, h = map(int, input().split())
     if w == 0 and h == 0:
         break
     else:
         li = [[] for _ in range(h)]
-        visit = [[False] * w for _ in range(h)] 
+        visit = [[False] * w for _ in range(h)]
         cnt = 0
 
         for i in range(h):
