@@ -12,7 +12,6 @@ def kangho(x):
 ax, ay, bx, by, cx, cy, dx, dy = map(float, input().split())
 lo, hi = 0, 100
 min_dist = cal_distance(0, 10000, 0, 10000)
-# print(min_dist)
 
 while hi - lo >= 1e-6:
     t1 = (lo * 2 + hi) // 3.0
