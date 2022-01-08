@@ -1,4 +1,7 @@
 from collections import deque
+import sys
+
+read = sys.stdin.readline
 
 def bfs(x):
     visit = [-1] * (n+1)
@@ -19,11 +22,11 @@ def bfs(x):
                     max_val[1] = a
     return max_val
 
-n = int(input())
+n = int(read())
 tree = [[] for _ in range(n+1)]
 
 for i in range(n-1):
-    li = list(map(int, input().split()))
+    li = list(map(int, read().split()))
     tree[li[0]].append([li[1], li[2]])
     tree[li[1]].append([li[0], li[2]])
 
