@@ -16,7 +16,7 @@ while start <= end:
             now = li[i]
     if cnt >= c:
         start = mid + 1
-        result = mid
+        result = mid1
     else:
         end = mid - 1
 
